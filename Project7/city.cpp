@@ -2,13 +2,14 @@
 #include <cstdlib>
 #include "global.h"
 #include "city.h"
+using namespace std;
 
 City::City(int nRows, int nCols)
 {
     if (nRows <= 0 || nCols <= 0 || nRows > MAXROWS || nCols > MAXCOLS)
     {
-        std::cout << "***** City created with invalid size " << nRows << " by "
-            << nCols << "!" << std::endl;
+        cout << "***** City created with invalid size " << nRows << " by "
+            << nCols << "!" << endl;
         exit(1);
     }
     m_rows = nRows;
@@ -139,23 +140,23 @@ void City::display() const
     for (r = 0; r < rows(); r++)
     {
         for (c = 0; c < cols(); c++)
-            std::cout << grid[r][c];
-        std::cout << std::endl;
+            cout << grid[r][c];
+        cout << endl;
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // Write message, Flatulan, and player info
-    std::cout << "There are " << m_nFlatulans << " unconverted Flatulans remaining." << std::endl;
+    cout << "There are " << m_nFlatulans << " unconverted Flatulans remaining." << endl;
     if (m_player == nullptr)
-        std::cout << "There is no player." << std::endl;
+        cout << "There is no player." << endl;
     else
     {
         if (m_player->age() > 0)
-            std::cout << "The player has lasted " << m_player->age() << " steps." << std::endl;
+            cout << "The player has lasted " << m_player->age() << " steps." << endl;
         if (m_player->isPassedOut())
-            std::cout << "The player has passed out." << std::endl;
+            cout << "The player has passed out." << endl;
         else
-            std::cout << "The player's health level is " << m_player->health() << std::endl;
+            cout << "The player's health level is " << m_player->health() << endl;
     }
 }
 

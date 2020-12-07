@@ -3,18 +3,19 @@
 #include "global.h"
 #include "flatulan.h"
 #include "city.h"
+using namespace std;
 
 Flatulan::Flatulan(City* cp, int r, int c)
 {
     if (cp == nullptr)
     {
-        std::cout << "***** A Flatulan must be created in some City!" << std::endl;
+        cout << "***** A Flatulan must be created in some City!" << endl;
         exit(1);
     }
     if (r < 1 || r > cp->rows() || c < 1 || c > cp->cols())
     {
-        std::cout << "***** Flatulan created with invalid coordinates (" << r << ","
-            << c << ")!" << std::endl;
+        cout << "***** Flatulan created with invalid coordinates (" << r << ","
+            << c << ")!" << endl;
         exit(1);
     }
     m_city = cp;

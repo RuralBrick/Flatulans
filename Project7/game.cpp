@@ -3,23 +3,24 @@
 #include <cstdlib>
 #include "global.h"
 #include "game.h"
+using namespace std;
 
 Game::Game(int rows, int cols, int nFlatulans)
 {
     if (nFlatulans < 0)
     {
-        std::cout << "***** Cannot create Game with negative number of Flatulans!" << std::endl;
+        cout << "***** Cannot create Game with negative number of Flatulans!" << endl;
         exit(1);
     }
     if (nFlatulans > MAXFLATULANS)
     {
-        std::cout << "***** Trying to create Game with " << nFlatulans
-            << " Flatulans; only " << MAXFLATULANS << " are allowed!" << std::endl;
+        cout << "***** Trying to create Game with " << nFlatulans
+            << " Flatulans; only " << MAXFLATULANS << " are allowed!" << endl;
         exit(1);
     }
     if (rows == 1 && cols == 1 && nFlatulans > 0)
     {
-        std::cout << "***** Cannot create Game with nowhere to place the Flatulans!" << std::endl;
+        cout << "***** Cannot create Game with nowhere to place the Flatulans!" << endl;
         exit(1);
     }
 
@@ -58,9 +59,9 @@ void Game::play()
 
     while (!p->isPassedOut() && m_city->flatulanCount() > 0)
     {
-        std::cout << "Move (u/d/l/r//q): ";
-        std::string action;
-        std::getline(std::cin, action);
+        cout << "Move (u/d/l/r//q): ";
+        string action;
+        getline(cin, action);
         if (action.size() == 0)  // player preaches
             p->preach();
         else
@@ -68,7 +69,7 @@ void Game::play()
             switch (action[0])
             {
             default:   // if bad move, nobody moves
-                std::cout << '\a' << std::endl;  // beep
+                cout << '\a' << endl;  // beep
                 continue;
             case 'q':
                 return;
@@ -84,7 +85,7 @@ void Game::play()
         m_city->display();
     }
     if (p->isPassedOut())
-        std::cout << "You lose." << std::endl;
+        cout << "You lose." << endl;
     else
-        std::cout << "You win." << std::endl;
+        cout << "You win." << endl;
 }
