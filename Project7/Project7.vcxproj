@@ -139,7 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="city.cpp" />
+    <ClCompile Include="flatulan.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="gas.cpp" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="city.h" />
+    <ClInclude Include="flatulan.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
