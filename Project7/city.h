@@ -1,4 +1,8 @@
 #pragma once
+
+#include "flatulan.h"
+#include "player.h"
+
 class City
 {
 public:

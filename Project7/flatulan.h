@@ -1,4 +1,7 @@
 #pragma once
+
+#include "city.h"
+
 class Flatulan
 {
 public:

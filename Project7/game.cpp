@@ -1,28 +1,24 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "global.h"
-#include "player.h"
-#include "city.h"
 #include "game.h"
-using namespace std;
 
 Game::Game(int rows, int cols, int nFlatulans)
 {
     if (nFlatulans < 0)
     {
-        cout << "***** Cannot create Game with negative number of Flatulans!" << endl;
+        std::cout << "***** Cannot create Game with negative number of Flatulans!" << std::endl;
         exit(1);
     }
     if (nFlatulans > MAXFLATULANS)
     {
-        cout << "***** Trying to create Game with " << nFlatulans
-            << " Flatulans; only " << MAXFLATULANS << " are allowed!" << endl;
+        std::cout << "***** Trying to create Game with " << nFlatulans
+            << " Flatulans; only " << MAXFLATULANS << " are allowed!" << std::endl;
         exit(1);
     }
     if (rows == 1 && cols == 1 && nFlatulans > 0)
     {
-        cout << "***** Cannot create Game with nowhere to place the Flatulans!" << endl;
+        std::cout << "***** Cannot create Game with nowhere to place the Flatulans!" << std::endl;
         exit(1);
     }
 
@@ -61,9 +57,9 @@ void Game::play()
 
     while (!p->isPassedOut() && m_city->flatulanCount() > 0)
     {
-        cout << "Move (u/d/l/r//q): ";
-        string action;
-        getline(cin, action);
+        std::cout << "Move (u/d/l/r//q): ";
+        std::string action;
+        std::getline(std::cin, action);
         if (action.size() == 0)  // player preaches
             p->preach();
         else
@@ -71,7 +67,7 @@ void Game::play()
             switch (action[0])
             {
             default:   // if bad move, nobody moves
-                cout << '\a' << endl;  // beep
+                std::cout << '\a' << std::endl;  // beep
                 continue;
             case 'q':
                 return;
@@ -87,7 +83,7 @@ void Game::play()
         m_city->display();
     }
     if (p->isPassedOut())
-        cout << "You lose." << endl;
+        std::cout << "You lose." << std::endl;
     else
-        cout << "You win." << endl;
+        std::cout << "You win." << std::endl;
 }

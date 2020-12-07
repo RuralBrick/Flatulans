@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="city.h" />
     <ClInclude Include="flatulan.h" />
+    <ClInclude Include="game.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="player.h" />
   </ItemGroup>
