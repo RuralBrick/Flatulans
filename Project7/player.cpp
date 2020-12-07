@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
+#include "global.h"
 #include "player.h"
+#include "city.h"
 
 Player::Player(City* cp, int r, int c)
 {

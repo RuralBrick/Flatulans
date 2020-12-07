@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include "global.h"
 #include "game.h"
 
 Game::Game(int rows, int cols, int nFlatulans)

@@ -1,6 +1,5 @@
 #pragma once
-
-#include "city.h"
+class City;
 
 class Flatulan
 {

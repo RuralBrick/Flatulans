@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
+#include "global.h"
 #include "flatulan.h"
+#include "city.h"
 
 Flatulan::Flatulan(City* cp, int r, int c)
 {

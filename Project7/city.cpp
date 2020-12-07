@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include "global.h"
 #include "city.h"
 
 City::City(int nRows, int nCols)

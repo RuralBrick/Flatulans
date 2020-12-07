@@ -1,5 +1,6 @@
 #pragma once
 
+#include "global.h"
 #include "flatulan.h"
 #include "player.h"
 
