@@ -1,5 +1,9 @@
 #ifndef CITY_H
 #define CITY_H
+
+#include "flatulan.h"
+#include "player.h"
+
 class City
 {
 public:
