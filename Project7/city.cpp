@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include "global.h"
+#include "flatulan.h"
+#include "player.h"
 #include "city.h"
 using namespace std;
 
