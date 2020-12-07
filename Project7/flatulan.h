@@ -1,8 +1,5 @@
 #ifndef FLATULAN_H
 #define FLATULAN_H
-
-#include "city.h"
-
 class Flatulan
 {
 public:

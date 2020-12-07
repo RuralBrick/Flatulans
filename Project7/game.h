@@ -1,8 +1,5 @@
 #ifndef GAME_H
 #define GAME_H
-
-#include "city.h"
-
 class Game
 {
 public:
