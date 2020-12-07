@@ -1,7 +1,6 @@
 #include <random>
 #include <utility>
 #include "global.h"
-using namespace std;
 
 int decodeDirection(char dir)
 {
@@ -19,10 +18,10 @@ int decodeDirection(char dir)
 int randInt(int min, int max)
 {
     if (max < min)
-        swap(max, min);
-    static random_device rd;
-    static default_random_engine generator(rd());
-    uniform_int_distribution<> distro(min, max);
+        std::swap(max, min);
+    static std::random_device rd;
+    static std::default_random_engine generator(rd());
+    std::uniform_int_distribution<> distro(min, max);
     return distro(generator);
 }
 
