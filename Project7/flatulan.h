@@ -1,5 +1,7 @@
-#ifndef FLATULAN_H
-#define FLATULAN_H
+#pragma once
+
+#include "city.h"
+
 class Flatulan
 {
 public:
@@ -19,4 +21,3 @@ private:
     int   m_row;
     int   m_col;
 };
-#endif

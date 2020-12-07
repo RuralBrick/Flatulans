@@ -1,5 +1,8 @@
-#ifndef CITY_H
-#define CITY_H
+#pragma once
+
+#include "flatulan.h"
+#include "player.h"
+
 class City
 {
 public:
@@ -33,4 +36,3 @@ private:
     // Helper functions
     bool isInBounds(int r, int c) const;
 };
-#endif

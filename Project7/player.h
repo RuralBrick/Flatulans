@@ -1,5 +1,7 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#pragma once
+
+#include "city.h"
+
 class Player
 {
 public:
@@ -25,4 +27,3 @@ private:
     int   m_age;
     int   m_health;
 };
-#endif
