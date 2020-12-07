@@ -2,8 +2,6 @@
 #include <string>
 #include <cstdlib>
 #include "global.h"
-#include "player.h"
-#include "city.h"
 #include "game.h"
 using namespace std;
 

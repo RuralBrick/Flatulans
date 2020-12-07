@@ -1,5 +1,7 @@
-#ifndef GAME_H
-#define GAME_H
+#pragma once
+
+#include "city.h"
+
 class Game
 {
 public:
@@ -13,4 +15,3 @@ public:
 private:
     City* m_city;
 };
-#endif

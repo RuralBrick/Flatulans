@@ -1,9 +1,5 @@
 #include "global.h"
-#include "flatulan.h"
-#include "player.h"
-#include "city.h"
 #include "game.h"
-using namespace std;
 
 int main()
 {
