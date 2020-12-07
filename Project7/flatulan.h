@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FLATULAN_H
+#define FLATULAN_H
 class Flatulan
 {
 public:
@@ -18,3 +19,4 @@ private:
     int   m_row;
     int   m_col;
 };
+#endif
